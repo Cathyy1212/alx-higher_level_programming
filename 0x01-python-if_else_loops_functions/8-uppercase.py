@@ -10,6 +10,3 @@ def uppercase(input_str):
         print(uppercase_char, end="")
     print()  # Print a new line after the loop
 
-# Test the function with your examples
-uppercase("best")
-uppercase("Best School 98 Battery street")
