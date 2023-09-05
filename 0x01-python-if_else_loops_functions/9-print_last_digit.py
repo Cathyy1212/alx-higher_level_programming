@@ -7,12 +7,3 @@ def print_last_digit(number):
         return last_digit
     else:
         raise ValueError("Input must be an integer")
-
-# Testez la fonction avec les exemples
-try:
-    print_last_digit(98)
-    print_last_digit(0)
-    r = print_last_digit(-1024)
-    print(r)
-except ValueError as e:
-    print(e)
