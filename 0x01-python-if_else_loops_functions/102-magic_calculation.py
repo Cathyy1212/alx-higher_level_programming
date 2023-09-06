@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 # 102-magic_calculation.py
-
-def magic_calculation(parameter_a, parameter_b, parameter_c):
+def magic_calculation(a, b, c):
     """Match bytecode provided by Holberton School."""
-    if parameter_a < parameter_b:
-        return parameter_c
-    if parameter_c > parameter_b:
-        return parameter_a + parameter_b
+    if a < b:
+        return c
+    if c > b:
+        return a + b
+    return a - b
