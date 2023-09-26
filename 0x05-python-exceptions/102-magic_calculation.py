@@ -1,12 +1,13 @@
-que(x, y):
-    resultat = 0
+#!/usr/bin/python3
+def magic_calculation(a, b):
+    x = 0
     for i in range(1, 3):
         try:
-            if i > x:
-                raise Exception('Trop loin')
+            if i > a:
+                raise Exception('Too far')
             else:
-                resultat += x ** y / i
+                x += a ** b / i
         except:
-            resultat = y + x
+            x = b + a
             break
-    return (resultat)
+    return (x)
