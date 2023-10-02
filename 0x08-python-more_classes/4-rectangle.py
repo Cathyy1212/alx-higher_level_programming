@@ -1,11 +1,23 @@
 #!/usr/bin/python3
+"""the Rectangle class definition"""
+
+
 class Rectangle:
+    """the rectangle class cefinition"""
+
     def __init__(self, width=0, height=0):
+        """Initialization a new Rectangle
+
+        Args:
+            width: The width of the new rectangle.
+            height: The height of the new rectangle.
+        """
         self.width = width
         self.height = height
 
     @property
     def width(self):
+        """the function to have the width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -18,6 +30,7 @@ class Rectangle:
 
     @property
     def height(self):
+        """the function to have the height of the Rectangle."""
         return self.__height
 
     @height.setter
@@ -29,16 +42,30 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        return self.__width * self.__height
+        """the function to have the area of the Rectangle."""
+        return (self.__width * self.__height)
 
     def perimeter(self):
-        return 2 * (self.__width + self.__height)
+        """the function to have the perimeter of the Rectangle."""
+        if self.__width == 0 or self.__height == 0:
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
+        """the function to have the printable representation of the Rectangle.
+        """
         if self.__width == 0 or self.__height == 0:
-            return ""
-        return '\n'.join(['#' * self.__width for _ in range(self.__height)])
+            return ("")
+
+        rect = []
+        for i in range(self.__height):
+            [rect.append('#') for j in range(self.__width)]
+            if i != self.__height - 1:
+                rect.append("\n")
+        return ("".join(rect))
 
     def __repr__(self):
-        return "Rectangle({}, {})".format(self.__width, self.__height)
-
+        """the function to get the string representation of the Rectangle"""
+        rect = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
+        return (rect)
