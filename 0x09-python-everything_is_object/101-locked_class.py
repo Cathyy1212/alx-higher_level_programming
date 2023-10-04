@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 class LockedClass:
-    __slots__ = ['first_name']
-
-    def __init__(self):
-        pass
+    def __setattr__(self, name, value):
+        if hasattr(self, name) and name != 'first_name':
+            raise AttributeError(f"'LockedClass' object has no attribute '{name}'")
+        super().__setattr__(name, value)
