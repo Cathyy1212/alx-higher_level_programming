@@ -1,24 +1,3 @@
-85 % de l'espace de stockage utilisés … Une fois la limite atteinte, vous n'aurez plus assez d'espace pour créer, modifier ou importer des fichiers. Profitez de 100 Go de stockage pour 1,99 € 0,49 €/mois pendant 3 mois.
-Nettoyer l'espace
-J'en profite
-￼
-Nom
-￼
-Autres options de tri
-Fichiers
-￼
-__init__.py
-￼
-￼
-base.py
-￼
-￼
-rectangle.py
-￼
-￼
-square.py
-￼
-￼
 #!/usr/bin/python3
 
 """Defines a base model class."""
